@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+  <title>HTML5 Skeleton</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon : http://favicons.fr/ -->
+  <link rel="shortcut icon" href="https://www.atpeaz.com/wp-content/uploads/2010/11/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://www.unixhops.com/wp-content/uploads/2015/03/favicon.png" type="image/png">
+</head>
+
+<body>
+
+<header>
+  <h1>Form Skeleton</h1>
+</header>
+
+<form method="post" action="traitement.php">
+  <fieldset>
+  
+    <legend>Inputs</legend>
+		<p>
+		<label for="nom">Nom <em>*</em></label>
+		<!--	placeholder: indication grisée 
+			required: il faut renseigner le champs sinon la validation est bloquée
+			autofocus: le curseur est positionné dans cette case au chargement de la page
+		-->
+			<input id="nom" placeholder="Name" autofocus required>
+		</p>
+
+		<p>
+		<label for="pass">PassWord <em>*</em></label>
+			<input type="password" name="pass" id="pass" required>		
+		</p>
+		
+		<p>
+		<label for="age">Age<em>*</em></label>
+		<!-- type="number": bascule le clavier sur un smartphone -->
+			<input id="age" type="number" placeholder="xx" pattern="[0-9]{2}" min="18" max ="77" required><br>
+		</p>
+
+		<p>
+		<label for="date">Date<em>*</em></label>
+			<input id="date" type="date"><br>
+		</p>
+
+		<p>
+		<label for="email">Email <em>*</em></label>
+			<input id="email" type="email" placeholder="prenom.nom@test.com" required pattern="[a-zA-Z]*.[a-zA-Z]*@test.com">
+  		</p>
+		
+  		<p>
+		<label for="telephone">Portable</label>
+		<!--	type="tel": bascule le clavier sur un smartphone
+				pattern: expression régulière à vérifier pour pouvoir valider
+		-->
+			<input id="telephone" type="tel" placeholder="06xxxxxxxx" pattern="06[0-9]{8}"><br>
+   		</p>
+
+  		<p>
+		<label for="url">URL</label>
+			<input id="url" type="url" placeholder="http://"><br>
+   		</p>
+
+  		<p>
+		<label for="curseur">Range</label>
+			<input id="curseur" type="range"><br>
+   		</p>
+
+  		<p>
+		<label for="couleur">Color</label>
+			<input id="couleur" type="color"><br>
+   		</p>
+
+  		<p>
+		<label for="search">Recherche</label>
+			<input id="search" type="search"><br>
+   		</p>
+
+		</fieldset>
+
+		<fieldset>
+		<legend>Combo</legend>
+		<p>
+		<label for="combo">Sexe</label>
+			<select id="combo">
+				<option value="F" name="sexe">Femme</option>
+				<option value="H" name="sexe" selected>Homme</option>
+			</select><br>
+		</p>
+		</fieldset>
+
+		<fieldset>
+		<legend>Radio</legend>
+		<p>
+			<input type="radio" name="size" id="size_1" value="small">
+		<label for="size_1">Small</label>
+			<input type="radio" name="size" id="size_2" value="large">
+		<label for="size_2">Large</label>
+		</p>
+		</fieldset>
+	
+		<fieldset>
+		<legend>CheckBox</legend>
+		<p>
+		<label for="check_1">Check 1</label>
+			<input type="checkbox" id="check_1" name="choice1" value="1">
+		<label for="check_2">Check 2</label>
+			<input type="checkbox" id="check_2" name="choice2" value="2">
+		</p>
+		</fieldset>
+
+		<fieldset>
+		<legend>Textarea</legend>
+		<p>
+			<label for="comments">Commentaire</label><br />
+			<textarea id="comments" rows="10" cols="50">Exemple de texte</textarea>
+		</p>
+		</fieldset>
+
+  <p> <button type="submit">Valider le formulaire</button> </p>
+  
+</form>
+
+
+</body>
+</html>
